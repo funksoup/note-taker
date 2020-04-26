@@ -21,10 +21,10 @@ app.post("/api/notes", function(req, res) {
   res.json(true);
 
   // append file db.json
-	fs.writeFile(path.join(__dirname, "../db/db.json"), JSON.stringify(notes), function (err) {
+  fs.writeFile(path.join(__dirname, "../db/db.json"), JSON.stringify(notes), function (err) {
 	  if (err) throw err;
 	  console.log('New note saved');
-	});
+  });
 
 });
 
@@ -40,6 +40,8 @@ app.delete("/api/notes/:id", function(req, res) {
 	  console.log('Filtered note saved');
 	});
 
+  // We then display the JSON to the users
+  res.json(true);
 
 });
 
