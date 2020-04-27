@@ -23,12 +23,12 @@ The application will be invoked with the following command:
 node server
 ```
 
-Running `node server` will initiate the app. The front end is displayed which will render on localhost:3000. The notes are held in a `notes` object.
+Running `node server` will initiate the app. The front end is displayed which will render on localhost:3000. The notes are held in a `notes` object and stored in a db.json file.
 
 
-Images that demonstrate the application's functionality:
+This gif demonstrates the application's functionality:
 
-[insert images]
+<img src="./public/assets/images/noteTaker.gif">
 
 
 ## License
