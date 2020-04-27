@@ -3,7 +3,10 @@
 
 A web app that can be used to write, save, and delete notes. This application uses an express backend to save and retrieve note data from a JSON file. 
 
+Example deployment: https://funksoup.herokuapp.com/notes
+
 ------
+
 
 ## Tech/Framework Used
 
@@ -12,6 +15,7 @@ Project is created with:
 * JavaScript
 * Node.js
 * Express
+
 
 
 ## Usage
@@ -31,9 +35,11 @@ This gif demonstrates the application's functionality:
 <img src="./public/assets/images/noteTaker.gif">
 
 
+
 ## License
 
 This project is licensed under the MIT license.
+
 
 
 ## Contributing
