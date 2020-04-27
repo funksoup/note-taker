@@ -13,10 +13,6 @@ require("./routes/apiRoutes")(app);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
-  // Log (server-side) 
-
-
-
 	console.log("listening");
 });
 

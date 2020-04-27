@@ -12,15 +12,12 @@ app.get("/api/notes", function(req, res) {
 app.post("/api/notes", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
-  // var newNote = req.body;
-
-  // We then add the json the user sent to the character array
   notes.push(req.body);
 
   // We then display the JSON to the users
   res.json(true);
 
-  // append file db.json
+  // write to file db.json
   fs.writeFile(path.join(__dirname, "../db/db.json"), JSON.stringify(notes), function (err) {
 	  if (err) throw err;
 	  console.log('New note saved');
@@ -31,8 +28,8 @@ app.post("/api/notes", function(req, res) {
 
 
 app.delete("/api/notes/:id", function(req, res) {
-
 	var noteID = req.params.id;
+	// filter notes by id -- if x.id is not equal to noteID (deleted note) then display note
 	notes = notes.filter(x => x.id != noteID);
 
 	fs.writeFile(path.join(__dirname, "../db/db.json"), JSON.stringify(notes), function (err) {
